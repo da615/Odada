@@ -1,0 +1,24 @@
+1. Core Java: HashMap Internals
+Question: "Could you explain the underlying implementation of HashMap in Java? How does it handle hash collisions?"
+Answer:
+"In JDK 8 and later, HashMap is implemented as an array of nodes, where each node can be either a linked list or a red-black tree. When we insert a key-value pair, it calculates the hash code of the key to determine the bucket index in the array.
+If multiple keys map to the same bucket, a hash collision occurs. Initially, these entries are stored in a linked list. However, to optimize performance, if the length of the linked list exceeds 8 and the array size is at least 64, it automatically converts the list into a red-black tree. This reduces the worst-case time complexity for lookups from O(n) to O(log n)."
+2. Concurrency: Thread-Safe Collections
+Question: "Since HashMap is not thread-safe, how does ConcurrentHashMap ensure thread safety while maintaining high concurrency?"
+Answer:
+"The implementation of ConcurrentHashMap evolved significantly between JDK 7 and JDK 8.
+In JDK 7, it used a segmented locking mechanism (Segment Locking), dividing the data into segments and locking each segment independently. However, in JDK 8, this was optimized. It now uses a combination of volatile, CAS (Compare-And-Swap), and synchronized. When inserting data, if the target bucket is empty, it uses CAS for lock-free insertion. If the bucket is not empty, it only locks the head node of that specific bucket using synchronized. This significantly reduces the lock granularity, allowing for much higher concurrent read and write performance."
+3. JVM: Garbage Collection Tuning
+Question: "In financial systems, low latency is critical. Can you explain the G1 garbage collector and why it's preferred over older algorithms like CMS?"
+Answer:
+"Older collectors like CMS often suffer from unpredictable pause times and memory fragmentation. G1 (Garbage-First) collector was designed to solve these issues.
+G1 divides the heap into multiple equal-sized regions rather than contiguous generations. It tracks the amount of garbage in each region and prioritizes collecting the regions with the most garbage first—hence the name 'Garbage-First'. More importantly, G1 allows us to set a target maximum pause time (e.g., 200ms). It intelligently selects a collection set that can be processed within this time limit, making it highly suitable for large-heap financial applications where predictable latency is crucial."
+4. System Design: Financial Idempotency
+Question: "In a payment or credit approval system, how do you prevent duplicate processing if a user submits the same request multiple times due to network issues?"
+Answer:
+"This is a classic idempotency problem. To guarantee that a transaction is processed exactly once, I would implement a multi-layered defense.
+First, at the API gateway or service level, I would use a distributed lock (like Redis) based on a unique business ID (e.g., transaction ID). This prevents concurrent duplicate requests.
+Second, at the database level, I would rely on unique constraints on the transaction ID. Even if the application layer fails to catch a duplicate, the database will reject the second insert.
+Finally, for asynchronous messaging (like Kafka), I would ensure the consumer processes messages idempotently by checking a processed-status table before executing the business logic."
+Interview Tip for HSBC:
+HSBC interviewers highly value communication skills and business context. When answering these technical questions, try to tie them back to your CARM project. For example, after explaining ConcurrentHashMap, you can add: "In our CARM system, we actually used ConcurrentHashMap to cache active credit approval sessions to avoid database bottlenecks."

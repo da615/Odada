@@ -1,0 +1,32 @@
+Part 1: Project Overview
+"I’m currently the core Java developer for CARM, a global credit approval and risk management system at HSBC. 
+It's a complex architecture involving Spring, Drools, AS400, and a new PLP business line. In our 11-member pod, I handle the full for the PLP and RE modules. 
+I also manage the CI/CD release process and act as the go-to person for critical frontend issues."
+
+Part 2: Key Contributions
+"I’ve driven three main initiatives that highlight my value to the team:
+-First, cross-border requirement management and system refactoring. As the core owner of the RE project,
+ I work closely with teams in India and the EU to translate complex financial needs into actionable stories. 
+For the PLP line, I led a major upgrade to JDK 21 and Spring Boot 3.5.14. By introducing multi-level caching and optimizing async processing, 
+we reduced slow requests and boosted overall performance.
+-Second, reshaping CI/CD efficiency. The old system took about 50 minutes to build and relied heavily on manual reviews. 
+I rewrote the CI/CD scripts to support batch builds and automated code reviews. 
+This cut the build time down to under 15 minutes and greatly improved our deployment safety and speed.
+-Third, full-stack troubleshooting in production. 
+Since our AS400 developers don't have frontend expertise, I took ownership of frontend and full-stack production cases.
+ Whether it's a UI bug or a cross-system error, I can quickly locate and fix it, ensuring our production environment stays stable."
+
+
+一、 项目概述（展现全局观与业务背景）
+“我目前主要负责汇丰的核心全球系统 CARM（企业信贷审批及风险管理系统）。该系统架构复杂，涵盖 Spring + Drools + AS400 的旧有业务线及全新的 PLP 业务线。
+在11人的Pod 中，我作为核心 Java 开发，不仅负责 PLP 和 RE 核心模块的全生命周期开发，还统筹 Release CI/CD 流程整合，并负责前端疑难问题的兜底保障。”
+二、 核心贡献与技术深度（突出不可替代性）
+“在项目中，我重点主导了以下三项工作，这也是我的核心价值所在：
+第一，主导核心业务重构与跨国需求管理（业务理解与架构能力）
+作为 RE 项目的核心 Owner，我全面负责与印度及欧盟团队对接，将复杂的金融需求拆解为 Story 并指导团队开发。
+接手 PLP 业务线后，我主导了 JDK 21 + Spring Boot 3.5.14 的跨代升级与重构。通过引入多级缓存和优化异步处理逻辑，大幅降低了慢请求比例，显著提升了接口性能。
+第二，重塑 CI/CD 工程效能（DevOps 与自动化能力）
+针对旧系统打包耗时过长（约50分钟）及人工 Review 效率低下的痛点，我主动重写了 Release CI/CD 脚本。
+改造后支持多项目批量构建，将单次打包时间压缩至15分钟以内，并以自动化检查替代人工 Review，大幅提升了部署效率与上线安全性。
+第三，跨技术栈兜底与生产保障（全栈能力与抗压能力）
+鉴于团队 AS400 开发人员缺乏前端技术栈，我在日常 Prod Case Support 中主动承担了前端及全链路疑难问题的排查。无论是前端异常还是跨系统报错，我都能快速定位并修复，有效保障了生产环境的稳定运行。”

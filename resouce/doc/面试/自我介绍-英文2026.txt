@@ -1,0 +1,23 @@
+我名字叫Adam，2009年毕业于桂林理工大学通信工程专业，本科学历。
+我的技术栈主要是java，精通spring、springboot、springcloud、mysql等，熟悉使用Jmeter、Jenkins等工具，熟悉DevOps CI/DC工作流。
+有银行金融业的项目业务知识背景。
+
+我在汇丰项目组工作了超过五年，在SSM部门，负责CARM（金融信贷预审批）系统，现在项目pod有11个人，Java 三个人、6个AS400，2个leader。
+我主要负责前后端开发和运维、prod case support等。
+从需求分析、代码开发、测试、环境部署、上线等，整个流程的工作都参与。日常的工作会和印度和欧盟、HK的同事有交流。
+
+在外企工作了约八年时间，较好的英语沟通能力，能适应英语办公环境。
+
+
+Good morning/afternoon. My name is Adam. I graduated from Guilin University of Technology in 2009 with a Bachelor's degree in Communication Engineering.
+
+My core technical stack is Java. I have a deep understanding , including Spring, Spring Boot, Spring Cloud, and MySQL. 
+I am also proficient in testing and DevOps tools like JMeter and Jenkins, and I am well-versed in CI/CD workflows. 
+Additionally, I bring solid domain knowledge in the banking and financial sector.
+
+I have been working in the HSBC project team for over five years, I am currently working on project team is SSM department. 
+My current project name is CARM system, which handles pre-approval for financial credit. 
+And now my project team include 11 members, 3 Java developers, 6 AS400 developers, and 2 team leaders.
+My current position is java full-stack development. 
+My responsibilities include, from requirement analysis, coding, and write Junit test case and golive to prod release if story signoff.
+So I consider myself familiar with the working environment at HSBC and able to adapt to an English speaking work environment.. Thank you.
